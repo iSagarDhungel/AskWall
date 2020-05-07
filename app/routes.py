@@ -1,7 +1,7 @@
 from flask import *
 from datetime import datetime
 from app import app
-
+from app.forms import LoginForm
 
 @app.route('/')
 def index():
