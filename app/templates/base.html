@@ -7,7 +7,15 @@
 <body>
 	<div>AskWall: 
 		<a href="/index">Home</a>
-		<a href="/login">Login</a></div>
+		<a href="/login">Login</a>
+	</div>
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for message in messages}
+				<li>{{ message }}</li>
+			{% endfor %}
+		{% endif %}
+	{% endwith%}
 	{% block body %} {% endblock %}
 </body>
 </html>
