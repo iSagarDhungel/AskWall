@@ -5,7 +5,9 @@ from app.models import User, Post
 def make_shell_context():
 	'''
 	for invoking user and post alongside app when running flask shell
-	# https://stackoverflow.com/questions/51337758/app-shell-context-processor-decorator-does-not-register-the-function-as-a-shell
+	Alternative to
+	>>> from app import db
+	
 	>>> flask shell
 	>>> db 
 	'''
