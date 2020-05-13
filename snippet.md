@@ -35,3 +35,8 @@ for u in users:
 >>> u.set_password('sagar')
 >>> db.session.add(u)
 >>> db.session.commit()
+
+# dont show user the feed unless they login\
+`in init.py`
+>>> login = LoginManager(app)
+>>>login.login_view = 'login'
