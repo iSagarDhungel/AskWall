@@ -26,3 +26,12 @@ db.session.commit()
 users = User.query.all()
 for u in users:
 	print(u.id, u.username, u.email)
+
+
+>>> from app import db
+>>> db.create_all()
+>>> from app.models import User
+>>> u = User(username='sagar', email='sagar@gmail.com')
+>>> u.set_password('sagar')
+>>> db.session.add(u)
+>>> db.session.commit()

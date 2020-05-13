@@ -22,6 +22,10 @@ class User(UserMixin, db.Model):
 
 @login.user_loader
 def load_user(id):
+	'''
+	flask-login doesn't concern itself with database,
+	it expects a function(user_loader) that takes id and returns user object
+	'''
 	return User.query.get(int(id))
 
 class Post(db.Model):
