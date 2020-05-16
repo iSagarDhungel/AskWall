@@ -47,3 +47,6 @@ for u in users:
 '6a6c19fea4a3676970167ce51f39e6ee'
 >>> http://www.gravatar.com/avatar/6a6c19fea4a3676970167ce51f39e6ee
 >>> http://www.gravatar.com/avatar/6a6c19fea4a3676970167ce51f39e6ee?d=identicon&s=256
+
+# restarting surver and console in error page
+>>> set FLASK_DEBUG = 1

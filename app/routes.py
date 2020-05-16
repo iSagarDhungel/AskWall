@@ -12,7 +12,7 @@ def before_request():
 	if current_user.is_authenticated:
 		current_user.last_seen = datetime.utcnow()
 		db.session.commit()
-
+ 
 @app.route('/')
 @app.route('/index')
 @login_required
@@ -28,7 +28,6 @@ def index():
 		}
 	]
 	return render_template('index.html', title = 'Home', posts=posts)
-
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
