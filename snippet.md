@@ -40,3 +40,10 @@ for u in users:
 `in init.py`
 >>> login = LoginManager(app)
 >>>login.login_view = 'login'
+
+
+>>> from hashlib import md5
+>>> md5(b'john@doe.com').hexdigest()
+'6a6c19fea4a3676970167ce51f39e6ee'
+>>> http://www.gravatar.com/avatar/6a6c19fea4a3676970167ce51f39e6ee
+>>> http://www.gravatar.com/avatar/6a6c19fea4a3676970167ce51f39e6ee?d=identicon&s=256
