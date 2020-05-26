@@ -1,4 +1,13 @@
-2020-05-26 19:39:02,285 ERROR: Exception on /index [GET] [in C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py:1892]
+2020-05-26 18:58:31,377 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
+2020-05-26 18:59:04,437 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
+2020-05-26 19:01:58,657 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
+2020-05-26 19:03:15,677 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
+2020-05-26 19:03:19,287 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
+2020-05-26 19:03:53,157 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
+2020-05-26 19:06:07,447 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
+2020-05-26 19:10:06,947 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
+2020-05-26 19:19:01,326 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
+2020-05-26 19:19:06,256 ERROR: Exception on /index [GET] [in C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py:1892]
 Traceback (most recent call last):
   File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -37,7 +46,8 @@ Traceback (most recent call last):
   File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\jinja2\environment.py", line 471, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'user' is undefined
-2020-05-26 19:39:02,776 ERROR: Exception on /index [GET] [in C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py:1892]
+2020-05-26 19:25:37,496 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
+2020-05-26 19:25:42,016 ERROR: Exception on /index [GET] [in C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py:1892]
 Traceback (most recent call last):
   File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -72,9 +82,48 @@ Traceback (most recent call last):
   File "C:\Users\HP\Desktop\AskWall\app\templates\index.html", line 22, in block "content"
     {% include "_post.html" %}
   File "C:\Users\HP\Desktop\AskWall\app\templates\_post.html", line 4, in top-level template code
-    <td><img src="{{ user.avatar(36) }}"></td>
+    <!-- <td><img src="{{ user.avatar(36) }}"></td> -->
   File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\jinja2\environment.py", line 471, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'user' is undefined
-2020-05-26 19:46:37,545 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
-2020-05-26 19:50:15,965 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
+2020-05-26 19:30:04,986 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
+2020-05-26 19:30:18,831 ERROR: Exception on /index [GET] [in C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\HP\Desktop\AskWall\app\routes.py", line 30, in index
+    return render_template('index.html', title = 'Home', form=form, posts=posts)
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\HP\Desktop\AskWall\app\templates\index.html", line 1, in top-level template code
+    {% extends 'base.html'%}
+  File "C:\Users\HP\Desktop\AskWall\app\templates\base.html", line 28, in top-level template code
+    {% block content %} {% endblock %}
+  File "C:\Users\HP\Desktop\AskWall\app\templates\index.html", line 22, in block "content"
+    {% include "_post.html" %}
+  File "C:\Users\HP\Desktop\AskWall\app\templates\_post.html", line 4, in top-level template code
+    <!-- <td><img src="{{ user.avatar(36) }}"></td> -->
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\jinja2\environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'user' is undefined
+2020-05-26 19:31:49,876 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
