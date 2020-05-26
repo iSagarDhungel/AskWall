@@ -50,3 +50,10 @@ for u in users:
 
 # restarting surver and console in error page
 >>> set FLASK_DEBUG = 1
+
+
+python -m smtpd -n -c DebuggingServer localhost:8025
+
+(askwall) C:\Users\HP>set MAIL_SERVER=localhost
+
+(askwall) C:\Users\HP>set MAIL_PORT = 8025
