@@ -57,3 +57,30 @@ python -m smtpd -n -c DebuggingServer localhost:8025
 (askwall) C:\Users\HP>set MAIL_SERVER=localhost
 
 (askwall) C:\Users\HP>set MAIL_PORT = 8025
+
+
+>>> from app.models import User
+>>> u1 = User.query.get(1)
+>>> u2 = User.query.get(2)
+>>> u1
+<User sagar_d>
+>>> u2
+<User sagard>
+>>> u1.followed.append(u2)
+>>> db.session.commit()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'db' is not defined
+>>> from app import db
+>>> db.session.commit()
+>>> u1.followed.all()
+[<User sagard>]
+>>> u2.followers.all()
+[<User sagar_d>]
+>>> u1.followed.remove(u2)
+>>> db.session.commit()
+>>> u2.followers.all()
+[]
+>>> u1.followed.all()
+[]
+>>>
