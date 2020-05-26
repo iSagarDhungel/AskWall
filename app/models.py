@@ -47,7 +47,7 @@ class User(UserMixin, db.Model):
 		if self.is_following(user):
 			self.followed.remove(user)
 	def is_following(self, user):
-		self.followed.filter(
+		return self.followed.filter(
 			followers.c.followed_id == user.id).count() > 0
 	def followed_posts(self):
 		''' Union of post from followed user + self'''
