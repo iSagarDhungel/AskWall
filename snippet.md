@@ -84,3 +84,11 @@ NameError: name 'db' is not defined
 >>> u1.followed.all()
 []
 >>>
+
+
+>>> from flask_mail import Message
+>>> from app import mail
+>>> msg = Message('test subject', sender=app.config['ADMINS'][0], recipients=['hiesagar@gmail.com'])
+>>> msg.body = "test body"
+>>> msg.html = "<h1>HTML BODY</h1>"
+>>> mail.send(msg)
