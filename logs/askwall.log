@@ -78,3 +78,27 @@ Traceback (most recent call last):
 jinja2.exceptions.UndefinedError: 'user' is undefined
 2020-05-26 19:46:37,545 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
 2020-05-26 19:50:15,965 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
+2020-05-26 20:03:01,671 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
+2020-05-28 23:15:23,084 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
+2020-05-28 23:15:33,544 ERROR: Exception on / [GET] [in C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\HP\Desktop\AskWall\app\routes.py", line 29, in index
+    page = request.args.gate('page', 1, type=int)
+AttributeError: 'ImmutableMultiDict' object has no attribute 'gate'
+2020-05-28 23:15:56,153 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
+2020-05-28 23:22:43,033 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
+2020-05-28 23:27:20,783 INFO: Askwall startup [in C:\Users\HP\Desktop\AskWall\app\__init__.py:46]
