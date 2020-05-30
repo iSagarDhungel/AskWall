@@ -1,4 +1,13 @@
-2020-05-26 19:31:53,456 ERROR: Exception on /index [GET] [in C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py:1892]
+2020-05-30 17:33:00,205 ERROR: Exception on / [GET] [in C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\sqlalchemy\engine\base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\sqlalchemy\engine\default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: user.profile_name
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
   File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -8,110 +17,59 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\_compat.py", line 39, in reraise
     raise value
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\HP\Desktop\AskWall\app\routes.py", line 30, in index
-    return render_template('index.html', title = 'Home', form=form, posts=posts)
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\templating.py", line 140, in render_template
-    ctx.app,
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\templating.py", line 120, in _render
-    rv = template.render(context)
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\jinja2\environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\jinja2\_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\HP\Desktop\AskWall\app\templates\index.html", line 1, in top-level template code
-    {% extends 'base.html'%}
-  File "C:\Users\HP\Desktop\AskWall\app\templates\base.html", line 28, in top-level template code
-    {% block content %} {% endblock %}
-  File "C:\Users\HP\Desktop\AskWall\app\templates\index.html", line 22, in block "content"
-    {% include "_post.html" %}
-  File "C:\Users\HP\Desktop\AskWall\app\templates\_post.html", line 4, in top-level template code
-    <td><img src="{{ user.avatar(36) }}"></td>
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\jinja2\environment.py", line 471, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'user' is undefined
-2020-05-26 19:35:52,451 ERROR: Exception on /index [GET] [in C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py:1892]
-Traceback (most recent call last):
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\HP\Desktop\AskWall\app\routes.py", line 30, in index
-    return render_template('index.html', title = 'Home', form=form, posts=posts)
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\templating.py", line 140, in render_template
-    ctx.app,
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\templating.py", line 120, in _render
-    rv = template.render(context)
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\jinja2\environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\jinja2\_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\HP\Desktop\AskWall\app\templates\index.html", line 1, in top-level template code
-    {% extends 'base.html'%}
-  File "C:\Users\HP\Desktop\AskWall\app\templates\base.html", line 28, in top-level template code
-    {% block content %} {% endblock %}
-  File "C:\Users\HP\Desktop\AskWall\app\templates\index.html", line 22, in block "content"
-    {% include "_post.html" %}
-  File "C:\Users\HP\Desktop\AskWall\app\templates\_post.html", line 4, in top-level template code
-    <td><img src="{{ user.avatar(36) }}"></td>
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\jinja2\environment.py", line 471, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'user' is undefined
-2020-05-26 19:35:53,496 ERROR: Exception on /explore [GET] [in C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py:1892]
-Traceback (most recent call last):
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\HP\Desktop\AskWall\app\routes.py", line 36, in explore
-    return render_template('index.html', title='Explore', posts = posts)
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\templating.py", line 140, in render_template
-    ctx.app,
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\templating.py", line 120, in _render
-    rv = template.render(context)
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\jinja2\environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\jinja2\_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\HP\Desktop\AskWall\app\templates\index.html", line 1, in top-level template code
-    {% extends 'base.html'%}
-  File "C:\Users\HP\Desktop\AskWall\app\templates\base.html", line 28, in top-level template code
-    {% block content %} {% endblock %}
-  File "C:\Users\HP\Desktop\AskWall\app\templates\index.html", line 22, in block "content"
-    {% include "_post.html" %}
-  File "C:\Users\HP\Desktop\AskWall\app\templates\_post.html", line 4, in top-level template code
-    <td><img src="{{ user.avatar(36) }}"></td>
-  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\jinja2\environment.py", line 471, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'user' is undefined
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask\app.py", line 2242, in preprocess_request
+    rv = func()
+  File "C:\Users\HP\Desktop\AskWall\app\routes.py", line 15, in before_request
+    if current_user.is_authenticated:
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\werkzeug\local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\werkzeug\local.py", line 307, in _get_current_object
+    return self.__local()
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask_login\utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask_login\utils.py", line 335, in _get_user
+    current_app.login_manager._load_user()
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask_login\login_manager.py", line 359, in _load_user
+    return self.reload_user()
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\flask_login\login_manager.py", line 321, in reload_user
+    user = self.user_callback(user_id)
+  File "C:\Users\HP\Desktop\AskWall\app\models.py", line 83, in load_user
+    return User.query.get(int(id))
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\sqlalchemy\orm\query.py", line 1004, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\sqlalchemy\orm\query.py", line 1121, in _get_impl
+    return db_load_fn(self, primary_key_identity)
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\sqlalchemy\orm\loading.py", line 287, in load_on_pk_identity
+    return q.one()
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\sqlalchemy\orm\query.py", line 3360, in one
+    ret = self.one_or_none()
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\sqlalchemy\orm\query.py", line 3329, in one_or_none
+    ret = list(self)
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\sqlalchemy\orm\query.py", line 3405, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\sqlalchemy\orm\query.py", line 3430, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\sqlalchemy\engine\base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\sqlalchemy\sql\elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\sqlalchemy\engine\base.py", line 1103, in _execute_clauseelement
+    distilled_params,
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\sqlalchemy\engine\base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\sqlalchemy\engine\base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\sqlalchemy\util\compat.py", line 178, in raise_
+    raise exception
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\sqlalchemy\engine\base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "C:\Users\HP\anaconda3\envs\askwall\lib\site-packages\sqlalchemy\engine\default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: user.profile_name
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.profile_name AS user_profile_name, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen 
+FROM user 
+WHERE user.id = ?]
+[parameters: (1,)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
