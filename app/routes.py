@@ -131,6 +131,7 @@ def user(username):
 	return render_template('user.html', user=user, posts=posts.items, prev_url=prev_url, next_url=next_url)
 
 
+
 @app.route('/edit_profile', methods=['GET', 'POST'])
 @login_required
 def edit_profile():
@@ -180,3 +181,12 @@ def unfollow(username):
 	flash('You are not following {}'.format(username))
 	return redirect(url_for('user', username= username))
 
+@app.route('/like/<post_id>')
+@login_required
+def like(post_id):
+	pass
+
+@app.route('/unlike/<post_id>')
+@login_required
+def unlike(post_id):
+	pass
